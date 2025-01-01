@@ -1,16 +1,16 @@
 import * as React from "react";
-import Item from "./Item";
+import CommodityItem from "./CommodityItem";
 
 const ItemList: React.FC = () => {
   const items = [
-    { name: "リンゴ", price: "100円" },
-    { name: "バナナ", price: "150円" },
+    { id: 1, name: "リンゴ", price: "100円" },
+    { id: 2, name: "バナナ", price: "150円" },
   ];
 
   return (
-    <div>
-      {items.map((item, index) => (
-        <Item key={index} name={item.name} price={item.price} />
+    <div className="mt-4 flex flex-col gap-4">
+      {items.map((item) => (
+        <CommodityItem key={item.id} name={item.name} price={item.price} />
       ))}
     </div>
   );
