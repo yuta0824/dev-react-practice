@@ -2,6 +2,18 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/css/main.css":
+/*!**************************!*\
+  !*** ./src/css/main.css ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/react-dom/cjs/react-dom-client.development.js":
 /*!********************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom-client.development.js ***!
@@ -27182,6 +27194,59 @@ if (false) {} else {
 }
 
 
+/***/ }),
+
+/***/ "./src/js/component/Item.tsx":
+/*!***********************************!*\
+  !*** ./src/js/component/Item.tsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var Item = function (_a) {
+    var name = _a.name, price = _a.price;
+    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null,
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", { className: "text-3xl font-bold underline" }, name),
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null,
+            "\u4FA1\u683C: ",
+            price)));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Item);
+
+
+/***/ }),
+
+/***/ "./src/js/component/ItemList.tsx":
+/*!***************************************!*\
+  !*** ./src/js/component/ItemList.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Item */ "./src/js/component/Item.tsx");
+
+
+var ItemList = function () {
+    var items = [
+        { name: "リンゴ", price: "100円" },
+        { name: "バナナ", price: "150円" },
+    ];
+    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, items.map(function (item, index) { return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Item__WEBPACK_IMPORTED_MODULE_1__["default"], { key: index, name: item.name, price: item.price })); })));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ItemList);
+
+
 /***/ })
 
 /******/ 	});
@@ -27274,13 +27339,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _component_ItemList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/ItemList */ "./src/js/component/ItemList.tsx");
+/* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/main.css */ "./src/css/main.css");
 
 
-// Clear the existing HTML content
-document.body.innerHTML = '<div id="app"></div>';
-// Render your React component instead
+
+
+// Reactコンポーネントをレンダリング
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById("app"));
-root.render(react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hello, world"));
+root.render(react__WEBPACK_IMPORTED_MODULE_0__.createElement(_component_ItemList__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 
 })();
 
