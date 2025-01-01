@@ -27196,10 +27196,36 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./src/js/component/Item.tsx":
-/*!***********************************!*\
-  !*** ./src/js/component/Item.tsx ***!
-  \***********************************/
+/***/ "./src/js/App.tsx":
+/*!************************!*\
+  !*** ./src/js/App.tsx ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   App: () => (/* binding */ App)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _component_ItemList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component/ItemList */ "./src/js/component/ItemList.tsx");
+/* harmony import */ var _component_Heading__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/Heading */ "./src/js/component/Heading.tsx");
+
+
+
+var App = function () {
+    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", { className: "p-4 container mx-auto" },
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_component_Heading__WEBPACK_IMPORTED_MODULE_2__.Heading, { label: "h1" }, "\u5546\u54C1\u4E00\u89A7"),
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_component_ItemList__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+};
+
+
+/***/ }),
+
+/***/ "./src/js/component/CommodityItem.tsx":
+/*!********************************************!*\
+  !*** ./src/js/component/CommodityItem.tsx ***!
+  \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -27209,15 +27235,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-var Item = function (_a) {
+var CommodityItem = function (_a) {
     var name = _a.name, price = _a.price;
-    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null,
-        react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", { className: "text-3xl font-bold underline" }, name),
+    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", { className: "p-4 bg-gray-100 rounded-md" },
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", { className: "text-xl font-bold" }, name),
         react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null,
             "\u4FA1\u683C: ",
             price)));
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Item);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CommodityItem);
+
+
+/***/ }),
+
+/***/ "./src/js/component/Heading.tsx":
+/*!**************************************!*\
+  !*** ./src/js/component/Heading.tsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Heading: () => (/* binding */ Heading)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var Heading = function (_a) {
+    var label = _a.label, children = _a.children;
+    if (label === "h1")
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", { className: "text-5xl" }, children);
+    if (label === "h2")
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", { className: "text-4xl" }, children);
+    if (label === "h3")
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", { className: "text-3xl" }, children);
+    if (label === "h4")
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", { className: "text-2xl" }, children);
+    if (label === "h5")
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", { className: "text-xl" }, children);
+    if (label === "h6")
+        return react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", { className: "text-xl" }, children);
+};
 
 
 /***/ }),
@@ -27234,15 +27292,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Item */ "./src/js/component/Item.tsx");
+/* harmony import */ var _CommodityItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CommodityItem */ "./src/js/component/CommodityItem.tsx");
 
 
 var ItemList = function () {
     var items = [
-        { name: "リンゴ", price: "100円" },
-        { name: "バナナ", price: "150円" },
+        { id: 1, name: "リンゴ", price: "100円" },
+        { id: 2, name: "バナナ", price: "150円" },
     ];
-    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, items.map(function (item, index) { return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Item__WEBPACK_IMPORTED_MODULE_1__["default"], { key: index, name: item.name, price: item.price })); })));
+    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", { className: "mt-4 flex flex-col gap-4" }, items.map(function (item) { return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_CommodityItem__WEBPACK_IMPORTED_MODULE_1__["default"], { key: item.id, name: item.name, price: item.price })); })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ItemList);
 
@@ -27339,7 +27397,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _component_ItemList__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/ItemList */ "./src/js/component/ItemList.tsx");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/js/App.tsx");
 /* harmony import */ var _css_main_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/main.css */ "./src/css/main.css");
 
 
@@ -27347,7 +27405,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Reactコンポーネントをレンダリング
 var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById("app"));
-root.render(react__WEBPACK_IMPORTED_MODULE_0__.createElement(_component_ItemList__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+root.render(react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App__WEBPACK_IMPORTED_MODULE_2__.App, null));
 
 })();
 
