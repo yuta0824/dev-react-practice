@@ -1,12 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
-import { TextField } from "./component/TextField";
-
-type Todo = {
-  task: string;
-  person: string;
-  deadline: string;
-};
+import { TextField } from "./component/parts/TextField";
+import { Todo } from "./component/todo/TypeTodo";
+import { ButtonRegister } from "./component/parts/ButtonRegister";
 
 export const App = () => {
   const [todoList, setTodoList] = useState<Todo[]>([]);
@@ -36,7 +32,7 @@ export const App = () => {
         onChange={setNewDeadline}
       ></TextField>
 
-      <button onClick={addNewTodo}>登録</button>
+      <ButtonRegister text="登録" onClick={addNewTodo}></ButtonRegister>
 
       <h2>TODOリスト</h2>
       <ul>
