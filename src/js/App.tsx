@@ -3,6 +3,8 @@ import { useState } from "react";
 import { TextField } from "./component/parts/TextField";
 import { Todo } from "./component/todo/TypeTodo";
 import { ButtonRegister } from "./component/parts/ButtonRegister";
+import { Heading } from "./component/parts/Heading";
+import { TodoList } from "./component/todo/TodoList";
 
 export const App = () => {
   const [todoList, setTodoList] = useState<Todo[]>([]);
@@ -14,6 +16,7 @@ export const App = () => {
     setTodoList((prev) => [
       ...prev,
       {
+        id: 1,
         task: newTask,
         person: newPerson,
         deadline: newDeadline,
@@ -23,6 +26,8 @@ export const App = () => {
 
   return (
     <>
+      <Heading label={"h1"}>TODOリスト</Heading>
+      <Heading label={"h2"}>TODOを追加</Heading>
       <TextField label="TODO" type="text" value={newTask} onChange={setNewTask}></TextField>
       <TextField label="担当者" type="text" value={newPerson} onChange={setNewPerson}></TextField>
       <TextField
@@ -31,19 +36,9 @@ export const App = () => {
         value={newDeadline}
         onChange={setNewDeadline}
       ></TextField>
-
       <ButtonRegister text="登録" onClick={addNewTodo}></ButtonRegister>
-
-      <h2>TODOリスト</h2>
-      <ul>
-        {todoList.map((todo, index) => (
-          <li key={index}>
-            <p>タスク:{todo.task}</p>
-            <p>担当者:{todo.person}</p>
-            <p>締切:{todo.deadline}</p>
-          </li>
-        ))}
-      </ul>
+      <Heading label={"h2"}>TODO一覧</Heading>
+      <TodoList todoList={todoList}></TodoList>
     </>
   );
 };
