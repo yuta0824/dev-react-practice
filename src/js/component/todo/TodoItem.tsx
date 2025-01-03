@@ -2,15 +2,18 @@ import * as React from "react";
 import { Todo } from "./TypeTodo";
 
 type Props = {
-  todo: Todo;
+  id: number;
+  task: string;
+  person: string;
+  deadline: string;
 };
 
-export const TodoItem = ({ todo }: Props) => {
+export const TodoItem = ({ id, task, person, deadline }: Props) => {
   return (
-    <li key={todo.id}>
-      <p>タスク:{todo.task}</p>
-      <p>担当者:{todo.person}</p>
-      <p>締切:{todo.deadline}</p>
+    <li key={id}>
+      <p>タスク:{task}</p>
+      <p>担当者:{person}</p>
+      <p>締切:{deadline}</p>
     </li>
   );
 };

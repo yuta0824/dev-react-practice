@@ -16,7 +16,7 @@ export const App = () => {
     setTodoList((prev) => [
       ...prev,
       {
-        id: 1,
+        id: Date.now(),
         task: newTask,
         person: newPerson,
         deadline: newDeadline,
