@@ -36,7 +36,7 @@ export const App = () => {
         value={newDeadline}
         onChange={setNewDeadline}
       ></TextField>
-      <ButtonRegister text="登録" onClick={addNewTodo}></ButtonRegister>
+      <ButtonRegister onClick={addNewTodo}>登録</ButtonRegister>
       <Heading label={"h2"}>TODO一覧</Heading>
       <TodoList todoList={todoList}></TodoList>
     </>
