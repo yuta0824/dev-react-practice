@@ -9,9 +9,14 @@ type Props = {
 
 export const TextField = ({ label, value, onChange, type }: Props) => {
   return (
-    <label>
-      {label}
-      <input type={type} value={value} onChange={(e) => onChange(e.target.value)} />
+    <label className="flex items-center gap-2">
+      <span className="w-[100px]">{label}</span>
+      <input
+        className="w-full border border-gray-400 p-2 bg-white"
+        type={type}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
     </label>
   );
 };

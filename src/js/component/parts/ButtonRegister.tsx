@@ -6,5 +6,9 @@ interface Props {
 }
 
 export const ButtonRegister = ({ onClick, children }: PropsWithChildren<Props>) => {
-  return <button onClick={onClick}>{children}</button>;
+  return (
+    <button className="bg-black py-4 px-10 w-fit text-white rounded mx-auto" onClick={onClick}>
+      {children}
+    </button>
+  );
 };

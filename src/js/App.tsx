@@ -25,7 +25,7 @@ export const App = () => {
   };
 
   return (
-    <>
+    <main className="flex flex-col mx-auto p-4 gap-5">
       <Heading label={"h1"}>TODOリスト</Heading>
       <Heading label={"h2"}>TODOを追加</Heading>
       <TextField label="TODO" type="text" value={newTask} onChange={setNewTask}></TextField>
@@ -39,6 +39,6 @@ export const App = () => {
       <ButtonRegister onClick={addNewTodo}>登録</ButtonRegister>
       <Heading label={"h2"}>TODO一覧</Heading>
       <TodoList todoList={todoList}></TodoList>
-    </>
+    </main>
   );
 };
