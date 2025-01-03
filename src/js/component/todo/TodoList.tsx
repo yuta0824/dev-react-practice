@@ -11,7 +11,7 @@ export const TodoList = ({ todoList }: Props) => {
     <ul>
       {todoList.map((todo) => (
         <TodoItem
-          id={todo.id}
+          key={todo.id}
           task={todo.task}
           person={todo.person}
           deadline={todo.deadline}
